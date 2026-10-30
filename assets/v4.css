@@ -138,3 +138,5 @@ html.nofetch .certbox{display:none}
 .book-row .bk-left .docw-certificate{height:190px;overflow:hidden;border-radius:4px}
 @media (max-width:760px){.book-row .bk-left .docw-certificate{max-width:none;width:100%!important}}
 .book-row .bk-left .docw-certificate{background:#fff!important;border-radius:12px}
+.book-row .certbox{background:#fff;border-radius:12px;display:flex;justify-content:center;overflow:hidden;height:190px}
+.book-row .certbox .docw-certificate{width:245px!important;height:190px;border-radius:0}
