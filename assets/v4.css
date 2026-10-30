@@ -165,3 +165,4 @@ html.nofetch .certbox{display:none}
 .sec-tb{padding-bottom:20px}
 .sec-tt{padding-top:20px;padding-bottom:100px}
 @media (max-width:980px){.sec-tb{padding-bottom:0}.sec-tt{padding-top:0;padding-bottom:70px}}
+.nav-dd .dd-t{display:block}
