@@ -127,3 +127,14 @@ html.nofetch .certbox{display:none}
 
 .gal-sec .wrap:has(> .anim-big){padding-bottom:clamp(42px,4.8vw,66px)}
 .anim-big{margin-bottom:0}
+/* v13 doctoralia grid */
+.book-row{display:grid!important;grid-template-columns:245px 380px!important;column-gap:48px!important;row-gap:22px;align-items:start!important;justify-content:center;max-width:none}
+.book-row .bk-head{grid-column:1/-1;text-align:center}
+.book-row .bk-left{grid-column:1}
+.book-row .bk-left .badge-row{flex-direction:column;align-items:stretch;gap:16px;margin-top:0}
+.book-row .bk-left .docw-certificate,.book-row .bk-left .docbadge{width:245px;box-sizing:border-box}
+.book-row .docbox{grid-column:2;align-self:start!important;justify-self:start!important;margin:0!important}
+@media (max-width:760px){.book-row{grid-template-columns:minmax(0,340px)!important;justify-content:center}.book-row .bk-left,.book-row .docbox{grid-column:1;justify-self:stretch!important;width:100%;max-width:340px}.book-row .bk-left .docw-certificate,.book-row .bk-left .docbadge{width:100%}.book-row .bk-left .docw-certificate{max-width:245px;margin-inline:auto}}
+.book-row .bk-left .docw-certificate{height:190px;overflow:hidden;border-radius:4px}
+@media (max-width:760px){.book-row .bk-left .docw-certificate{max-width:none;width:100%!important}}
+.book-row .bk-left .docw-certificate{background:#fff!important;border-radius:12px}
