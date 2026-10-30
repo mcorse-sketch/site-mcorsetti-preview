@@ -113,3 +113,10 @@ html.nofetch .certbox{display:none}
 .docfb b{font:400 clamp(40px,4vw,60px)/1 'Instrument Serif',serif}
 .docfb small{font-size:15px;opacity:.8}
 .docfb-btn{margin-top:14px;background:var(--gold2);color:#0a1120;padding:15px 26px;border-radius:999px;font-weight:600;font-size:14px;letter-spacing:.06em}
+/* v9 docbox compacto */
+.docbox{width:100%;max-width:380px;min-height:0;height:390px;border-radius:12px;justify-self:center;align-self:center;margin-inline:auto}
+.docbox .docfb{min-height:390px;height:100%;padding:28px 30px;gap:10px}
+.docbox.ok{background:transparent!important;border-color:transparent;padding:0!important}
+.docbox.ok .docw-big{height:390px;width:100%;background:transparent;display:block}
+.docbox .docw-big{background:transparent}
+@media(max-width:420px){.docbox{max-width:100%}}
