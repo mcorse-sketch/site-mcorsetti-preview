@@ -173,3 +173,8 @@ html.nofetch .certbox{display:none}
 .wa svg{width:38px;height:38px}
 .wa svg path{fill-rule:evenodd}
 @media (max-width:980px){.wa{width:60px;height:60px}.wa svg{width:34px;height:34px}}
+
+.jg-btn:before{background:#1ebe5a}
+.jg-btn:hover{color:#fff!important}
+.jg-btn svg{width:26px;height:26px}
+.jg-btn svg path{fill-rule:evenodd}
