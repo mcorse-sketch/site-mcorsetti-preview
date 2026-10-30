@@ -125,5 +125,5 @@ html.nofetch .certbox{display:none}
 .anim-big .media{width:100%;aspect-ratio:16/9;border-radius:18px;overflow:hidden}
 .anim-big video{width:100%;height:100%;object-fit:cover;display:block}
 
-.gal-sec .wrap:has(> .anim-big){padding-bottom:clamp(14px,1.6vw,22px)}
+.gal-sec .wrap:has(> .anim-big){padding-bottom:clamp(42px,4.8vw,66px)}
 .anim-big{margin-bottom:0}
