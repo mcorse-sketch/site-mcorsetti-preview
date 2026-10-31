@@ -195,3 +195,9 @@ html.nofetch .certbox{display:none}
 .tema-go{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-top:6px}
 @media(max-width:1000px){.tema-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.tema-grid{grid-template-columns:1fr}}
 .revs-row .certbox{height:200px;align-items:flex-start}.revs-row .certbox iframe{width:245px!important;height:200px!important;min-height:200px}
+.revs-row .certbox{flex:0 0 319px;width:319px;height:260px;position:relative;display:block;padding:0}
+.revs-row .certbox iframe{position:absolute;top:0;left:0;width:245px!important;height:200px!important;min-height:200px;transform:scale(1.3);transform-origin:0 0}
+.revs-row .rv-c{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:300px}
+.revs-row .rv-c blockquote{max-width:760px}
+@media(max-width:860px){.revs-row .certbox{align-self:center}.revs-row .rv-c{min-height:0}}
+.revs-row .certbox{flex:0 0 306px;width:306px;height:325px;background:transparent}.revs-row .certbox iframe{height:260px!important;min-height:260px;transform:scale(1.25)}.revs-row .rv-c{min-height:340px}@media(max-width:860px){.revs-row .rv-c{min-height:0}}
