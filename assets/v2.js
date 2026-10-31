@@ -24,3 +24,29 @@ d.querySelectorAll('video[data-src]').forEach(v=>vo.observe(v));
 d.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>d.body.classList.remove('menu')));
 d.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',ev=>{const t=d.querySelector(a.getAttribute('href'));if(t){ev.preventDefault();lenis?lenis.scrollTo(t):t.scrollIntoView({behavior:'smooth'})}}));
 })();
+
+/* Origem do contato (Jorge): os botões do WhatsApp para o número do Jorge abrem uma frase pronta que identifica de onde o visitante veio.
+   google = chegou com gclid/gbraid/wbraid ou utm_source=google; meta = utm_source facebook/instagram/meta; senão = site. A 1ª origem fica guardada por 30 dias. */
+(function(){
+var NUM='5521967856074',K='wa_origem_v1',DIA=864e5;
+function detecta(){var q=new URLSearchParams(location.search),s=(q.get('utm_source')||'').toLowerCase(),o=null;
+if(q.get('gclid')||q.get('gbraid')||q.get('wbraid')||s==='google')o='google';
+else if(/^(facebook|fb|instagram|ig|meta)$/.test(s))o='meta';
+var r=null;try{r=JSON.parse(localStorage.getItem(K)||'null')}catch(e){}
+if(o){try{localStorage.setItem(K,JSON.stringify({o:o,t:Date.now()}))}catch(e){}return o}
+if(r&&r.o&&Date.now()-r.t<30*DIA)return r.o;return 'site'}
+var TEMA={consulta:['marcar uma consulta','marcar uma consulta'],geral:['informações','informações'],rezum:['informações sobre próstata (Rezum)','informações sobre o tratamento Rezum']};
+function frase(o,tema){var fim=(TEMA[tema]||TEMA.geral)[0];
+if(o==='google')return 'Olá, Jorge! Encontrei o Dr. Marco no Google e gostaria de '+fim+'.';
+if(o==='meta')return 'Olá, Jorge! Vi o anúncio do Dr. Marco e gostaria de '+fim+'.';
+return 'Olá, Jorge! Vim pelo site do Dr. Marco e gostaria de '+fim+'.'}
+function tema(txt){txt=(txt||'').toLowerCase();if(/rezum/.test(txt))return 'rezum';if(/agendar|marcar/.test(txt))return 'consulta';return 'geral'}
+function ajusta(a){try{var h=a.getAttribute('href')||'';if(h.indexOf('wa.me/'+NUM)<0)return;
+var m=h.match(/[?&]text=([^&]*)/),antigo=m?decodeURIComponent(m[1]):'';
+var t=frase(detecta(),/rezum/i.test(location.pathname)?'rezum':tema(antigo));
+a.setAttribute('href','https://wa.me/'+NUM+'?text='+encodeURIComponent(t))}catch(e){}}
+function todos(){document.querySelectorAll('a[href*="wa.me/'+NUM+'"]').forEach(ajusta)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',todos);else todos();
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(a)ajusta(a)},true);
+window.__waOrigem={detecta:detecta,frase:frase,tema:tema};
+})();
