@@ -181,3 +181,7 @@ html.nofetch .certbox{display:none}
 .pg-index h1.display.xl{font-size:clamp(40px,5.4vw,86px);line-height:.98}
 .intro{font-size:clamp(21px,1.9vw,29px);line-height:1.3}
 .phero h1{font-size:clamp(42px,7vw,118px)}.phero h1.h-sm{font-size:clamp(27px,3.5vw,59px)}
+.revs-row{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center}.revs-row .certbox{align-self:center}@media(max-width:860px){.revs-row{grid-template-columns:1fr;gap:28px}.revs-row .certbox{justify-self:center}}
+.revs-row{display:flex;gap:48px;align-items:center}.revs-row .certbox{flex:0 0 245px;height:190px;background:#fff;border-radius:12px;overflow:hidden}.revs-row .rv-car{flex:1;min-width:0}@media(max-width:860px){.revs-row{flex-direction:column;align-items:stretch}.revs-row .certbox{align-self:center}}
+.ft-big{font-size:clamp(39px,6.3vw,104px)}.ft-big .ar{width:clamp(28px,3.5vw,56px)}
+.revs-row{display:flex;gap:48px;align-items:center}.revs-row .certbox{flex:0 0 245px;height:190px;background:#fff;border-radius:12px;overflow:hidden}.revs-row .rv-car{flex:1;min-width:0}@media(max-width:860px){.revs-row{flex-direction:column;align-items:stretch}.revs-row .certbox{align-self:center}}
