@@ -194,3 +194,4 @@ html.nofetch .certbox{display:none}
 .tema-c small{font-size:15px;line-height:1.5;opacity:.75;flex:1}
 .tema-go{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-top:6px}
 @media(max-width:1000px){.tema-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.tema-grid{grid-template-columns:1fr}}
+.revs-row .certbox{height:200px;align-items:flex-start}.revs-row .certbox iframe{width:245px!important;height:200px!important;min-height:200px}
